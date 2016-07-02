@@ -1,18 +1,18 @@
 //
-//  AddGroceryCategoriesViewController.m
+//  AddItemsViewController.m
 //  GrocerryLesson
 //
-//  Created by Bryan Ayllon on 6/30/16.
+//  Created by Bryan Ayllon on 7/1/16.
 //  Copyright © 2016 Bryan Ayllon. All rights reserved.
 //
 
-#import "AddGroceryCategoriesViewController.h"
+#import "AddItemsViewController.h"
 
-@interface AddGroceryCategoriesViewController ()
+@interface AddItemsViewController ()
 
 @end
 
-@implementation AddGroceryCategoriesViewController
+@implementation AddItemsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,23 +23,24 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(IBAction)close:(id)sender{
-    [self dismissViewControllerAnimated:YES completion:nil];
 
+
+
+
+
+
+-(IBAction)itemClosed:(id)sender{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
--(IBAction)saveButtonPressed:(id)sender{
-    [self.delegate addButtonWasPressed: self.categorieNameField.text];
+-(IBAction)addItemButtonWasPresseds:(id)sender{
+    [self.delegate addItemButtonWasPressed: self.itemNameField.text];
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
     
 }
-
-
-
-
-
 
 /*
 #pragma mark - Navigation

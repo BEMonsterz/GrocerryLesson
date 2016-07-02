@@ -29,17 +29,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="wJM-YS-lKn">
-                        <barButtonItem key="rightBarButtonItem" title="Add Item" id="dmx-Pa-Ldj"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dmx-Pa-Ldj">
+                            <connections>
+                                <segue destination="Llq-qj-wUt" kind="presentation" id="AAe-XB-tIR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWr-GW-hcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1167" y="-283"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Items View Controller-->
         <scene sceneID="doH-pS-IJo">
             <objects>
-                <viewController id="Llq-qj-wUt" sceneMemberID="viewController">
+                <viewController id="Llq-qj-wUt" customClass="AddItemsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FUu-Pm-e1I"/>
                         <viewControllerLayoutGuide type="bottom" id="UJy-IE-5cD"/>
@@ -55,16 +59,24 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="addItemButtonWasPressed:" destination="Llq-qj-wUt" eventType="editingDidEnd" id="ug4-eY-F9z"/>
+                                </connections>
                             </textField>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfQ-j0-eK2">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfQ-j0-eK2">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="rhb-pZ-iew"/>
-                                </constraints>
                                 <items>
-                                    <barButtonItem title="Delete" id="XW8-kG-i5r"/>
+                                    <barButtonItem title="Delete" id="XW8-kG-i5r">
+                                        <connections>
+                                            <action selector="itemClosed:" destination="Llq-qj-wUt" id="Dqt-vv-aTz"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="qfW-NE-Xnb"/>
-                                    <barButtonItem title="Save" id="L5q-K6-GQv"/>
+                                    <barButtonItem title="Save" id="L5q-K6-GQv">
+                                        <connections>
+                                            <action selector="addItemButtonWasPresseds:" destination="Llq-qj-wUt" id="MS2-vS-b2H"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -72,6 +84,9 @@
                         <constraints>
                             <constraint firstItem="tLF-Vt-PK5" firstAttribute="top" secondItem="FUu-Pm-e1I" secondAttribute="bottom" constant="153" id="I2Z-eD-hiH"/>
                             <constraint firstItem="tLF-Vt-PK5" firstAttribute="centerX" secondItem="EVs-2y-Fd6" secondAttribute="centerX" id="LgP-kF-NuM"/>
+                            <constraint firstItem="cfQ-j0-eK2" firstAttribute="top" secondItem="EVs-2y-Fd6" secondAttribute="top" id="UHS-zX-xEl"/>
+                            <constraint firstItem="cfQ-j0-eK2" firstAttribute="centerX" secondItem="tLF-Vt-PK5" secondAttribute="centerX" id="WaT-Mo-G1X"/>
+                            <constraint firstItem="cfQ-j0-eK2" firstAttribute="leading" secondItem="EVs-2y-Fd6" secondAttribute="leading" id="mbx-uR-61h"/>
                         </constraints>
                     </view>
                 </viewController>

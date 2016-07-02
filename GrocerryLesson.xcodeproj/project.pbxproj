@@ -16,6 +16,7 @@
 		33020F8E1D2571A100099BA4 /* GroceryCategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33020F8D1D2571A100099BA4 /* GroceryCategoriesTableViewController.m */; };
 		33020F911D257D8200099BA4 /* GroceryCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 33020F901D257D8200099BA4 /* GroceryCategory.m */; };
 		33020F941D25874900099BA4 /* GroceryItemsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33020F931D25874900099BA4 /* GroceryItemsTableViewController.m */; };
+		3348E9F31D26B99A007321C6 /* AddItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348E9F21D26B99A007321C6 /* AddItemsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		33020F901D257D8200099BA4 /* GroceryCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryCategory.m; sourceTree = "<group>"; };
 		33020F921D25874900099BA4 /* GroceryItemsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryItemsTableViewController.h; sourceTree = "<group>"; };
 		33020F931D25874900099BA4 /* GroceryItemsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryItemsTableViewController.m; sourceTree = "<group>"; };
+		3348E9F11D26B99A007321C6 /* AddItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemsViewController.h; sourceTree = "<group>"; };
+		3348E9F21D26B99A007321C6 /* AddItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 				33020F901D257D8200099BA4 /* GroceryCategory.m */,
 				33020F921D25874900099BA4 /* GroceryItemsTableViewController.h */,
 				33020F931D25874900099BA4 /* GroceryItemsTableViewController.m */,
+				3348E9F11D26B99A007321C6 /* AddItemsViewController.h */,
+				3348E9F21D26B99A007321C6 /* AddItemsViewController.m */,
 			);
 			path = GrocerryLesson;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			files = (
 				33020F941D25874900099BA4 /* GroceryItemsTableViewController.m in Sources */,
 				33020F771D25682300099BA4 /* AppDelegate.m in Sources */,
+				3348E9F31D26B99A007321C6 /* AddItemsViewController.m in Sources */,
 				33020F911D257D8200099BA4 /* GroceryCategory.m in Sources */,
 				33020F8E1D2571A100099BA4 /* GroceryCategoriesTableViewController.m in Sources */,
 				33020F741D25682300099BA4 /* main.m in Sources */,
@@ -319,6 +325,7 @@
 				33020F881D25682300099BA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

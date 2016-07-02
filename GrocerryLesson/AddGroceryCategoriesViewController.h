@@ -13,7 +13,6 @@
 
 
 -(void) addButtonWasPressed:(NSString *) category;
--(void) itemClose:(NSString *) item;
 
 
 @end
