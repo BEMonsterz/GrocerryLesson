@@ -34,10 +34,11 @@
     
 }
 
--(IBAction)addItemButtonWasPresseds:(id)sender{
-    [self.delegate addItemButtonWasPressed: self.itemNameField.text];
+-(IBAction)addItemButtonWasPressed:(id)sender{
+    [self.addItemsDelegate addItemButtonWasPressed: self.itemNameField.text];
     
     [self dismissViewControllerAnimated:YES completion:nil];
+    NSLog(@"%@", self.itemNameField.text);
     
     
 }

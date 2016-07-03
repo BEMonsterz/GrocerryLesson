@@ -8,7 +8,27 @@
 
 #import <UIKit/UIKit.h>
 #import "GroceryCategory.h"
-@interface GroceryItemsTableViewController : UITableViewController
+#import "AddItemsViewController.h"
+#import "ItemCategory.h"
+
+
+
+
+
+
+//#import "AddGroceryCategoriesViewController.h"
+//#import "GroceryCategory.h"
+//#import "GroceryItemsTableViewController.h"
+
+
+@interface GroceryItemsTableViewController : UITableViewController{
+    
+    
+    NSMutableArray *_groceryItems;
+    
+    
+}
+
 @property (nonatomic,strong) GroceryCategory *selectedGroceryCategory;
 
 @end

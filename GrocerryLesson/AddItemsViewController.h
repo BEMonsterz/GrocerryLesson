@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "GroceryItemsTableViewController.h"
 
 
 @protocol AddItemsDelegate <NSObject>
@@ -21,7 +21,10 @@
     
 }
 @property(nonatomic,weak) IBOutlet UITextField *itemNameField;
-@property(nonatomic,weak) id<AddItemsDelegate> delegate;
+
+
+@property (nonatomic, weak) id<AddItemsDelegate> addItemsDelegate;
+
  @end
 
 

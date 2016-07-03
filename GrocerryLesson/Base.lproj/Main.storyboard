@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6Lg-0f-ayZ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cells" id="6Lg-0f-ayZ">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Lg-0f-ayZ" id="60N-xD-b53">
@@ -30,8 +30,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="wJM-YS-lKn">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dmx-Pa-Ldj">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="Llq-qj-wUt" kind="presentation" id="AAe-XB-tIR"/>
+                                <segue destination="Llq-qj-wUt" kind="presentation" identifier="AddItemsCategorySegue" id="AAe-XB-tIR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -59,25 +60,27 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="addItemButtonWasPressed:" destination="Llq-qj-wUt" eventType="editingDidEnd" id="ug4-eY-F9z"/>
-                                </connections>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfQ-j0-eK2">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <barButtonItem title="Delete" id="XW8-kG-i5r">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="itemClosed:" destination="Llq-qj-wUt" id="Dqt-vv-aTz"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qfW-NE-Xnb"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qfW-NE-Xnb">
+                                        <color key="tintColor" red="0.4941176471" green="0.3411764706" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
                                     <barButtonItem title="Save" id="L5q-K6-GQv">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <action selector="addItemButtonWasPresseds:" destination="Llq-qj-wUt" id="MS2-vS-b2H"/>
+                                            <action selector="addItemButtonWasPressed:" destination="Llq-qj-wUt" id="pai-UF-voq"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="barTintColor" red="0.4941176471" green="0.3411764706" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" cyan="0.65455280172413788" magenta="0.0" yellow="0.081196120689655177" black="0.27470366379310346" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
@@ -89,6 +92,9 @@
                             <constraint firstItem="cfQ-j0-eK2" firstAttribute="leading" secondItem="EVs-2y-Fd6" secondAttribute="leading" id="mbx-uR-61h"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="itemNameField" destination="tLF-Vt-PK5" id="cVA-K3-KMU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDT-v3-zpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,6 +128,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Grocery List" id="du8-61-FxP">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="q4E-xE-cOc">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="FZC-jD-YZZ" kind="presentation" identifier="AddGroceryCategorySegue" id="g2V-5R-Ncq"/>
                             </connections>
@@ -159,17 +166,20 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem title="Close" id="Hpo-IN-oEF">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="close:" destination="FZC-jD-YZZ" id="QMn-5c-sb5"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="dve-VT-SfK"/>
                                     <barButtonItem title="Save" id="5cX-F8-6dz">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <action selector="saveButtonPressed:" destination="FZC-jD-YZZ" id="3WN-pt-hMJ"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="barTintColor" red="0.4941176471" green="0.3411764706" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" cyan="0.75272090517241375" magenta="0.4349946120689655" yellow="0.76945043103448274" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
