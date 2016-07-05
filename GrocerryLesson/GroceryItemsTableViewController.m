@@ -39,11 +39,7 @@
     
     [_groceryItems addObject:itemCategory];
     [self.tableView reloadData];
-
-//
-//    
-//    
-//    
+  
 }
 #pragma mark - Table view data source
 
