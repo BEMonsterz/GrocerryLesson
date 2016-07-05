@@ -61,8 +61,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfQ-j0-eK2">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfQ-j0-eK2">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="6nI-kU-kWA"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem title="Delete" id="XW8-kG-i5r">
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -182,7 +185,7 @@
                                 <color key="barTintColor" red="0.4941176471" green="0.3411764706" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" cyan="0.75272090517241375" magenta="0.4349946120689655" yellow="0.76945043103448274" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <color key="backgroundColor" cyan="0.18139156879194632" magenta="0.74758808724832215" yellow="0.42132445469798657" black="0.14261744966442952" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                         <constraints>
                             <constraint firstItem="JG5-Nd-AzW" firstAttribute="centerX" secondItem="VyV-R1-uZ4" secondAttribute="centerX" id="PjN-JN-lcn"/>
                             <constraint firstAttribute="trailing" secondItem="VyV-R1-uZ4" secondAttribute="trailing" id="Wdg-gI-G0H"/>

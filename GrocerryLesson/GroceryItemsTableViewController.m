@@ -18,10 +18,15 @@
     [super viewDidLoad];
 
     
+    
+    
     self.title = self.selectedGroceryCategory.title;
     
-    _groceryItems = [[NSMutableArray alloc] init];
+    _groceryItems = self.selectedGroceryCategory.groceryItems;
+
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -30,10 +35,11 @@
 -(void) addItemButtonWasPressed:(NSString *)item{
     
     ItemCategory *itemCategory = [[ItemCategory alloc] init];
-    itemCategory.title = item;
+    itemCategory.titles = item;
     
     [_groceryItems addObject:itemCategory];
     [self.tableView reloadData];
+
 //
 //    
 //    
@@ -71,7 +77,7 @@
     // Configure the cell...
     ItemCategory *itemCategory = _groceryItems[indexPath.row];
     
-    cells.textLabel.text = itemCategory.title;
+    cells.textLabel.text = itemCategory.titles;
     
     return cells;
 }

@@ -29,14 +29,9 @@
     GroceryCategory *groceryCategory = [[GroceryCategory alloc] init];
     groceryCategory.title = category;
     
+    groceryCategory.groceryItems = [NSMutableArray array];
     [_groceryCategoriesArray addObject:groceryCategory];
-    
-    //Setting up delegate
-    
-//    self.customerTextField.delegate = self;
-    
-//    [_groceryCategoriesArray addObject:(NSString *)category];
-//    NSLog(@"%@",category);
+
     [self.tableView reloadData];
     
 }

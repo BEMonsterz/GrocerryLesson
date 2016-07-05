@@ -11,24 +11,10 @@
 #import "AddItemsViewController.h"
 #import "ItemCategory.h"
 
-
-
-
-
-
-//#import "AddGroceryCategoriesViewController.h"
-//#import "GroceryCategory.h"
-//#import "GroceryItemsTableViewController.h"
-
-
-@interface GroceryItemsTableViewController : UITableViewController{
-    
-    
-    NSMutableArray *_groceryItems;
-    
-    
-}
+@interface GroceryItemsTableViewController : UITableViewController
 
 @property (nonatomic,strong) GroceryCategory *selectedGroceryCategory;
+@property(nonatomic,strong) NSMutableArray *groceryItems;
+
 
 @end

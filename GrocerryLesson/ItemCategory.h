@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface ItemCategory : NSObject
-@property (nonatomic,copy) NSString *title;
+@property (nonatomic,copy) NSString *titles;
 @property (nonatomic,strong) NSMutableArray *groceryItems;
 
 
