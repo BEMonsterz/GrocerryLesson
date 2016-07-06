@@ -31,8 +31,40 @@
     
     groceryCategory.groceryItems = [NSMutableArray array];
     [_groceryCategoriesArray addObject:groceryCategory];
+    
+    NSData *groceryData = [NSKeyedArchiver archivedDataWithRootObject:groceryCategory];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    [userDefaults setObject:groceryData forKey:@"title"];
+    GroceryCategory *grocery = (GroceryCategory *) [NSKeyedUnarchiver unarchiveObjectWithData:groceryData];
+    
+    [userDefaults synchronize];
+    
 
+    
+    
     [self.tableView reloadData];
+    
+//    Person *person = [[Person alloc] init];
+//    person.firstName = @"John";
+//    person.lastName = @"Doe";
+//    
+//    NSData *personData = [NSKeyedArchiver archivedDataWithRootObject:person];
+//    
+//    [userDefaults setObject:personData forKey:@"Person"];
+//    
+//    NSMutableArray *people = [NSMutableArray array];
+//    [people addObject:person];
+//    
+//    NSData *peopleData = [NSKeyedArchiver archivedDataWithRootObject:people];
+//    
+//    [userDefaults setObject:peopleData forKey:@"PeopleData"];
+//    
+//    //[userDefaults setInteger:25 forKey:@"Age"];
+//    
+//    [userDefaults synchronize];
+
     
 }
 

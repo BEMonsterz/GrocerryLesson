@@ -29,7 +29,9 @@
 }
 
 -(IBAction)saveButtonPressed:(id)sender{
+  
     [self.delegate addButtonWasPressed: self.categorieNameField.text];
+    
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
